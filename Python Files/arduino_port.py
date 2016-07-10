@@ -21,8 +21,8 @@ class Arduino():
 	def getPort(self):
 		portList = list(serial.tools.list_ports.comports())
 		for port in portList:
-				""" Note: PID is device specific, this is for arduino micro """
-			    if "VID:PID=2341:8037" in port[0]\
+			#	""" Note: PID is device specific, this is for arduino micro """
+			if "VID:PID=2341:8037" in port[0]\
 				or "VID:PID=2341:8037" in port[1]\
 				or "VID:PID=2341:8037" in port[2]:
 				return port[0]
